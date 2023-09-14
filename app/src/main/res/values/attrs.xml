@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="Backdrop">
+        <attr name="frontLayout" format="reference"/>
+        <attr name="backLayout" format="reference"/>
+        <attr name="openRadius" format="dimension"/>
+    </declare-styleable>
+</resources>
