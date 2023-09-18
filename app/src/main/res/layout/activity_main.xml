@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <me.penguinpistol.backdrop.Backdrop
+        android:id="@+id/backdrop"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:frontLayout="@id/front"
+        app:backLayout="@id/back"
+        app:openRadius="32dp">
+
+        <ScrollView
+            android:id="@+id/back"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:scrollbars="none">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="500dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="This is Back Layout"
+                    android:textColor="@color/white"/>
+
+            </FrameLayout>
+
+        </ScrollView>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/front"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingHorizontal="16dp"
+            android:orientation="vertical"
+            android:gravity="center_vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="This is Front Layout"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_open"
+                android:text="OPEN"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </me.penguinpistol.backdrop.Backdrop>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
